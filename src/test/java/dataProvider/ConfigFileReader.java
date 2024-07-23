@@ -9,7 +9,7 @@ import java.util.Properties;
 public class ConfigFileReader {
 
     public Properties properties;
-    private final String propertyFilePath= "C:/Users/gbrav/IdeaProjects/demoBlaze-TestNG/Configuration/config.properties";
+    private final String propertyFilePath= "C:/Users/gbrav/IdeaProjects/demoBlase-TestNG/Configuration/config.properties";
 
 
     public ConfigFileReader(){
@@ -109,11 +109,18 @@ public class ConfigFileReader {
             throw new RuntimeException("Value not specified in the Configuration.properties file.");
         }
     }
-
     public String getSignUpTittle(){
         String title = properties.getProperty("signUpModalTittle");
         if(title != null){
             return title;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getEmptyAlert(){
+        String alert = properties.getProperty("alertEmptyFields");
+        if(alert != null){
+            return alert;
         } else {
             throw new RuntimeException("Value not specified in the Configuration.properties file.");
         }

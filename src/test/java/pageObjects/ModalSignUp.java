@@ -33,5 +33,25 @@ public class ModalSignUp extends BaseClass{
         }
         return true;
     }
+    @Step("Click Sign Upo button")
+    public boolean clickSignUp() {
+        try {
+            driver.findElement(locModalSignUp.btnSignUp).click();
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+    @Step("Validate Alert of Empty Form")
+    public boolean validateAlerrtOfEmptyForm(String alertMsg){
+        try {
+            Assert.assertEquals(driver.switchTo().alert().getText(), alertMsg);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 
 }

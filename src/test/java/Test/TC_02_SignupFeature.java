@@ -24,6 +24,8 @@ public class TC_02_SignupFeature extends setUpClass{
     public void CreateAccountWithEmptyInformation() {
         menuBar.clickSignUpButton();
         modalSignUp.validateModalSignUp(configFileReader.getSignUpTittle());
+        modalSignUp.clickSignUp();
+        modalSignUp.validateAlerrtOfEmptyForm(configFileReader.getEmptyAlert());
     }
 }
 
