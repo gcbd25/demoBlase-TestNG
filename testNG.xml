@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LogIn Functionality">
+    <test name="LogIn with an invalid username">
+        <classes>
+            <class name="Test.TC_01_LoginFeature">
+                <methods>
+                    <include name="LoginWithInvalidUsername"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="LogIn with an invalid Password">
+        <classes>
+            <class name="Test.TC_01_LoginFeature">
+                <methods>
+                    <include name="LoginWithInvalidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="LogIn with valid Credentials">
+        <classes>
+            <class name="Test.TC_01_LoginFeature">
+                <methods>
+                    <include name="LoginWithValidCredentials"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Sign Up with an empty form">
+        <classes>
+            <class name="Test.TC_02_SignupFeature">
+                <methods>
+                    <include name="CreateAccountWithEmptyInformation"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
