@@ -64,4 +64,13 @@
             </class>
         </classes>
     </test> <!-- Test -->
+    <test name="Delete Products on Cart">
+        <classes>
+            <class name="Test.TC_03_CartFeature">
+                <methods>
+                    <include name="deleteProductsFromCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
 </suite> <!-- Suite -->

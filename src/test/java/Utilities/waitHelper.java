@@ -31,4 +31,9 @@ public class waitHelper {
 		wait.until(ExpectedConditions.presenceOfElementLocated(element));
 	}
 
+	public void waitInvisibilityOfElementLocated (By element) {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30L)).pollingEvery(Duration.ofSeconds(5L)).ignoring(NoSuchElementException.class);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
+	}
+
 }

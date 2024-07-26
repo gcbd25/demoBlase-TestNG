@@ -155,4 +155,60 @@ public class ConfigFileReader {
             throw new RuntimeException("Value not specified in the Configuration.properties file.");
         }
     }
+    public String getName(){
+        String data = properties.getProperty("Name");
+        if(data != null){
+            return data;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getCountry(){
+        String data = properties.getProperty("Country");
+        if(data != null){
+            return data;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getCity(){
+        String data = properties.getProperty("City");
+        if(data != null){
+            return data;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getCC(){
+        String data = properties.getProperty("CC");
+        if(data != null){
+            return data;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getMonth(){
+        String data = properties.getProperty("Month");
+        if(data != null){
+            return data;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getYear(){
+        String data = properties.getProperty("Year");
+        if(data != null){
+            return data;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getConfMessage(){
+        String data = properties.getProperty("confMessage");
+        if(data != null){
+            return data;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
 }
