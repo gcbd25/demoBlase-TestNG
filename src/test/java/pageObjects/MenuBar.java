@@ -49,7 +49,20 @@ public class MenuBar extends BaseClass {
         try {
             wait.waitPresenceOfElementLocated(locMenu.btnSignUp);
             driver.findElement(locMenu.btnSignUp).click();
-            screen.screenshot("Click Sign Up Button on Menu Bar");
+            screen.screenshot("Click Sign Up Button");
+        }catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    @Step("Click Cart Button on Menu Bar")
+    public boolean clickCartButton() {
+        try {
+            wait.waitPresenceOfElementLocated(locMenu.btnCart);
+            driver.findElement(locMenu.btnCart).click();
+            screen.screenshot("Click Cart Button");
         }catch(Exception e){
             e.printStackTrace();
             return false;

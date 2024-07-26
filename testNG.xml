@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="LogIn Functionality">
+<suite name="DemoBlaze Regression Suite">
     <test name="LogIn with an invalid username">
         <classes>
             <class name="Test.TC_01_LoginFeature">
@@ -33,6 +33,33 @@
             <class name="Test.TC_02_SignupFeature">
                 <methods>
                     <include name="CreateAccountWithEmptyInformation"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Sign Up with an Existing Email">
+        <classes>
+            <class name="Test.TC_02_SignupFeature">
+                <methods>
+                    <include name="CreateAccountWithRepeatedEmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Successfully Sign Up ">
+        <classes>
+            <class name="Test.TC_02_SignupFeature">
+                <methods>
+                    <include name="CreateAccount"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Complete Purchase ">
+        <classes>
+            <class name="Test.TC_03_CartFeature">
+                <methods>
+                    <include name="purchaseFlow"/>
                 </methods>
             </class>
         </classes>

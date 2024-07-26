@@ -7,10 +7,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigFileReader {
-
     public Properties properties;
     private final String propertyFilePath= "C:/Users/gbrav/IdeaProjects/demoBlase-TestNG/Configuration/config.properties";
-
 
     public ConfigFileReader(){
         BufferedReader reader;
@@ -119,6 +117,38 @@ public class ConfigFileReader {
     }
     public String getEmptyAlert(){
         String alert = properties.getProperty("alertEmptyFields");
+        if(alert != null){
+            return alert;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getExistingUserAlert(){
+        String alert = properties.getProperty("alertExistingUser");
+        if(alert != null){
+            return alert;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getSuccessAlert(){
+        String alert = properties.getProperty("alertSuccessUserCreated");
+        if(alert != null){
+            return alert;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getDevice(){
+        String device = properties.getProperty("device");
+        if(device != null){
+            return device;
+        } else {
+            throw new RuntimeException("Value not specified in the Configuration.properties file.");
+        }
+    }
+    public String getProductAddedAlert(){
+        String alert = properties.getProperty("alertProductAdded");
         if(alert != null){
             return alert;
         } else {

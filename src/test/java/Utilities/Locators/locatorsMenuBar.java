@@ -6,4 +6,6 @@ public class locatorsMenuBar {
     public By btnLogIn = By.xpath("//a[@id='login2']");
     public By username = By.xpath("//a[@id='nameofuser']");
     public By btnSignUp = By.xpath("//a[@id='signin2']");
+    public By btnCart = By.xpath("//a[normalize-space()='Cart']");
+
 }

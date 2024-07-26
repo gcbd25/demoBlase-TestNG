@@ -12,7 +12,6 @@ import Utilities.Locators.locatorsModalSignUp;
 import io.qameta.allure.Step;
 
 public class ModalSignUp extends BaseClass{
-
 	public ModalSignUp(WebDriver rdriver) {
 		driver = rdriver;
         PageFactory.initElements(driver, this);
@@ -33,10 +32,11 @@ public class ModalSignUp extends BaseClass{
         }
         return true;
     }
-    @Step("Click Sign Upo button")
+    @Step("Click Sign Up button")
     public boolean clickSignUp() {
         try {
             driver.findElement(locModalSignUp.btnSignUp).click();
+            screen.screenshot("Click Sign Up");
         }catch (Exception e){
             e.printStackTrace();
             return false;
@@ -53,5 +53,44 @@ public class ModalSignUp extends BaseClass{
         }
         return true;
     }
-
+    @Step("Input An Existing Username")
+    public boolean setExistingUser(String user){
+        try {
+            driver.findElement(locModalSignUp.inpUser).sendKeys(user);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+    @Step("Input a password")
+    public boolean setPassword(String psw){
+        try {
+            driver.findElement(locModalSignUp.inpPsw).sendKeys(psw);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+    @Step("Validate Alert of Empty Form")
+    public boolean validateAlerrtOfEExistingUser(String alertMsg){
+        try {
+            Assert.assertEquals(driver.switchTo().alert().getText(), alertMsg);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+    @Step("Validate Alert of Success")
+    public boolean validateAlertOfSuccess(String alertMsg){
+        try {
+            Assert.assertEquals(driver.switchTo().alert().getText(), alertMsg);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 }

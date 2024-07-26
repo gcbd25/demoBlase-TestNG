@@ -18,9 +18,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import dataProvider.ConfigFileReader;
-import pageObjects.MenuBar;
-import pageObjects.ModalLogIn;
-import pageObjects.ModalSignUp;
+import pageObjects.*;
 
 public class setUpClass extends BaseClass {
 	@BeforeTest
@@ -55,7 +53,10 @@ public class setUpClass extends BaseClass {
         //Page Objects
         menuBar = new MenuBar(driver);
         modalLogIn = new ModalLogIn(driver);
-        modalSignUp= new ModalSignUp(driver);
+        modalSignUp = new ModalSignUp(driver);
+        homepage = new HomePage(driver);
+        prodPage = new ProductsPage(driver);
+        cartPage = new CartPage(driver);
     }
 
     @BeforeClass
